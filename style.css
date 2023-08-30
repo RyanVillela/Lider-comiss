@@ -1,0 +1,79 @@
+
+/* Configurando fundo */
+#all_screen {
+  position: relative;
+  height: 100vh;
+}
+
+#form_principal_login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  height: 250px;
+  background-color: #ebe8e8;
+  transform: translate(-50%, -50%);  
+  border: 2px solid #ccc;
+}
+
+#container_login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #ebe8e8;
+  transform: translate(-50%, -50%);
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+#form_principal_cadc {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  height: 250px;
+  background-color: #ebe8e8;
+  transform: translate(-50%, -50%);  
+  border: 2px solid #ccc;
+}
+
+
+#form_principal_cadV {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 90%;
+  background-color: #ebe8e8;
+  transform: translate(-50%, -50%);  
+  border: 2px solid #ccc;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}

@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+        <title>Bootstrap Example</title>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <body>
-<div id="all_screen">
-    <div id="form_principal_cadc">
-        <div id="container_login">
-            <label for="username"><b>Razão Social</b>
-                <input style="margin: 0 0 10px 0;">
-            </label>
-            <label for="username"><b>Cnpj</b>
-                <input type="password" style="margin: 0 0 10px 0;">
-            </label>
-            <label for="username"><b>Vendedor</b>
-                <input type="text">
-            </label>
-            <button type="submit">Cadastrar</button>
+<div class="container border border-5 mt-2 p-4 bg-light bg-gradiente">
+    <form class="row g-3">
+        <div class="col-md-12">
+            <p class="fw-bold">CADASTRO DE CLIENTE</p>
         </div>
-        
-    </div>
+        <div class="col-md-4">
+            <label for="cnpjclient" class="form-label fw-bold">CNPJ</label>
+            <input type="text" id="CnpjClient" class="form-control">
+        </div>
+        <div class="col-md-4">
+            <label for="rsclient" class="form-label fw-bold">Razão Social:</label>
+            <input type="text" id="rscliente" class="form-control">
+        </div>
+        <div class="col-md-4">
+            <label for="fantasiaclient" class="form-label fw-bold">Fantasia</label>
+            <input type="text" id="fantasiaclient" class="form-control">
+        </div>
+    </form>
+</div>
 </div>
 </body>
 </html>

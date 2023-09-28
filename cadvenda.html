@@ -5,9 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-        <title>Bootstrap Example</title>
+        <title>Cadastro De Cliente</title>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        
 </head>
 <body>
 <div class="container border border-5 mt-2 p-4 bg-light bg-gradiente">
@@ -27,8 +28,84 @@
             <label for="fantasiaclient" class="form-label fw-bold">Fantasia</label>
             <input type="text" id="fantasiaclient" class="form-control">
         </div>
+        <div class="col-md-4">
+            <label for="inscricaoclient" class="form-label fw-bold">Inscrição Estadual</label>
+            <input type="text" id="inscricaoclient" class="form-control">
+        </div>
+        <div class="col-md-8">
+            <label for="enderecoclient" class="form-label fw-bold">Endereço</label>
+            <input type="text" id="enderecoclient" class="form-control">
+        </div>
+        <div class="col-md-4">
+            <label for="bairroclient" class="form-label fw-bold">Bairro</label>
+            <input type="text" id="bairroclient" class="form-control">
+        </div>
+        <div class="col-md-1">
+            <label for="numeroclient" class="form-label fw-bold">Numero</label>
+            <input type="text" id="numeroclient" class="form-control">
+        </div>
+        <div class="col-md-3">
+            <label for="cidadeclient" class="form-label fw-bold">Cidade</label>
+            <input type="text" id="cidadeclient" class="form-control">
+        </div>
+        <div class="col-md-1">
+            <label for="ufclient" class="form-label fw-bold">UF:</label>
+            <input type="text" id="ufclient" class="form-control">
+        </div>
+        <div class="col-md-3">
+            <label for="cepclient" class="form-label fw-bold">Cep:</label>
+            <input type="text" id="cepclient" class="form-control">
+        </div>
+        <div id="maisfone">
+            <button type="button" class="btn btn-primary">
+                Contato
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-telephone-plus-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM12.5 1a.5.5 0 0 1 .5.5V3h1.5a.5.5 0 0 1 0 1H13v1.5a.5.5 0 0 1-1 0V4h-1.5a.5.5 0 0 1 0-1H12V1.5a.5.5 0 0 1 .5-.5z"/>
+                </svg>
+             </button>
+        </div>
+        <div id="fones"></div>
+        <div id="maisemail">
+            <button type="button" class="btn btn-primary">
+                E-mail            
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square-fill" viewBox="0 0 16 16">
+                <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z"/>
+            </svg>            
+          </button>
+        </div>
+        <div id="emailsclient"></div>
+        <div class="col-md12">
+            <label for="obsclient" class="form-label fw-bold">OBS:</label>
+            <input type="text" id="obsclient" class="form-control">
+        </div>
     </form>
 </div>
 </div>
 </body>
+<script>
+
+    var aumentacontato = 1;
+    var aumentaemail = 1;
+ 
+     $("#maisfone").click(function(){
+        if(aumentacontato > 4){
+        alert("Não é Possivel adicionar mais numeros");
+    }else{
+        var NewFone = $('<div class="col-md-3"><label for="newfone'+aumentacontato+'" class="form-label fw-bold">Contato 0'+aumentacontato+':</label><input type="text" id="newfone'+aumentacontato+'" class="form-control"></div>');
+        $("#fones").before(NewFone);
+        aumentacontato = aumentacontato + 1;
+    }
+    });
+
+    $("#maisemail").click(function(){
+        if(aumentaemail > 4){
+        alert("Não é Possivel adicionar mais E-mails");
+    }else{
+        var NewEmail = $('<div class="col-md-3"><label for="newemail'+aumentaemail+'" class="form-label fw-bold">E-mail 0'+aumentaemail+':</label><input type="text" id="newemail'+aumentaemail+'" class="form-control"></div>');
+        $("#emailsclient").before(NewEmail);
+        aumentaemail = aumentaemail + 1;
+    }
+    });
+
+</script>
 </html>
